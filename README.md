@@ -1,6 +1,10 @@
 ![MapOS](https://raw.githubusercontent.com/RamonSilva20/mapos/master/assets/img/logo.png)
 
-#### _Versão 2.6.4_
+#### CUSTOM_Versão 2.6.4_
+
+Este código contém customizações realizadas por mim utilizando como base o sistema MapOS. Não se trata de uma build oficial e nem será mantida como tal. O objetivo é compartilhar os recursos e modificações que implementei. Não recomendo que usuários sem conhecimento de programação utilizem essa versão.
+
+####
 
 MapOS é um sistema gratuito para de controle de ordens de serviço. 
 Para mais informações visite __[sistemamapos.esy.es](https://www.sistemamapos.esy.es)__ 
