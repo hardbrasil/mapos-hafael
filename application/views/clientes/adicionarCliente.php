@@ -46,47 +46,49 @@
                     </div>
 
                     <div class="control-group" class="control-label">
-                        <label for="rua" class="control-label">Rua<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="rua" type="text" name="rua" value="<?php echo set_value('rua'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="numero" class="control-label">Número<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="numero" type="text" name="numero" value="<?php echo set_value('numero'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group" class="control-label">
-                        <label for="bairro" class="control-label">Bairro<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="bairro" type="text" name="bairro" value="<?php echo set_value('bairro'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group" class="control-label">
-                        <label for="cidade" class="control-label">Cidade<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="cidade" type="text" name="cidade" value="<?php echo set_value('cidade'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group" class="control-label">
-                        <label for="estado" class="control-label">Estado<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="estado" type="text" name="estado" value="<?php echo set_value('estado'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group" class="control-label">
                         <label for="cep" class="control-label">CEP<span class="required">*</span></label>
                         <div class="controls">
-                            <input id="cep" type="text" name="cep" value="<?php echo set_value('cep'); ?>"  />
+                            <input id="cep" type="text" name="cep" value="<?php echo set_value('cep'); ?>"  />&nbsp;
+                            <a href="javascript:showZipFields();">Não sei meu CEP</a>
                         </div>
                     </div>
 
+                    <div id="hide-address" style="position:absolute;left:-2000px">
+                        <div class="control-group" class="control-label">
+                            <label for="rua" class="control-label">Rua<span class="required">*</span></label>
+                            <div class="controls">
+                                <input id="rua" type="text" name="rua" value="<?php echo set_value('rua'); ?>"  />
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="numero" class="control-label">Número<span class="required">*</span></label>
+                            <div class="controls">
+                                <input id="numero" type="text" name="numero" value="<?php echo set_value('numero'); ?>"  />
+                            </div>
+                        </div>
+
+                        <div class="control-group" class="control-label">
+                            <label for="bairro" class="control-label">Bairro<span class="required">*</span></label>
+                            <div class="controls">
+                                <input id="bairro" type="text" name="bairro" value="<?php echo set_value('bairro'); ?>"  />
+                            </div>
+                        </div>
+
+                        <div class="control-group" class="control-label">
+                            <label for="cidade" class="control-label">Cidade<span class="required">*</span></label>
+                            <div class="controls">
+                                <input id="cidade" type="text" name="cidade" value="<?php echo set_value('cidade'); ?>"  />
+                            </div>
+                        </div>
+
+                        <div class="control-group" class="control-label">
+                            <label for="estado" class="control-label">Estado<span class="required">*</span></label>
+                            <div class="controls">
+                                <input id="estado" type="text" name="estado" value="<?php echo set_value('estado'); ?>"  />
+                            </div>
+                        </div>
+                    </div>
 
 
                     <div class="form-actions">
@@ -104,7 +106,9 @@
 </div>
 
 
+<script src="<?php echo base_url()?>assets/js/jquery.cep.js"></script>
 <script src="<?php echo base_url()?>assets/js/jquery.validate.js"></script>
+<script src="<?php echo base_url()?>assets/js/jquery.mask.min.js"></script>
 <script type="text/javascript">
       $(document).ready(function(){
            $('#formCliente').validate({
@@ -144,6 +148,8 @@
                 $(element).parents('.control-group').addClass('success');
             }
            });
+
+           $("#cep").mask("99999-999");
       });
 </script>
 
